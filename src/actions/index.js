@@ -1,5 +1,3 @@
-import { formActions } from "./formActions"
-
 export const increment = (num) => {
     return {
         type: "INCREMENT",
@@ -39,6 +37,9 @@ export const SIGN_OUT = () => {
     }
 }
 
-export const FORM = (form, type) => {
-    return formActions(form, type)
+export const FORM = (payload, type) => {
+        return {
+        type,
+        payload
+    }
 }
