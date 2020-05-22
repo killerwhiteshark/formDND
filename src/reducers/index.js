@@ -1,13 +1,13 @@
 import counterReducer from "./counter";
 import loggedReducer from "./isLogged";
-import formReducer from "./form";
+import newFormReducer from "./newForm";
 
 import { combineReducers } from "redux";
 
 const allReducer = combineReducers({
     counter: counterReducer,
     isLogged: loggedReducer,
-    newForm: formReducer
+    newForm: newFormReducer
 });
 
 export default allReducer;

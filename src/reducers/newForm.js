@@ -1,4 +1,4 @@
-const formReducer = (
+const newFormReducer = (
     state = {
         form: {
             formName: "",
@@ -68,8 +68,6 @@ const formReducer = (
         case "DRAG_END":
             const { destination, source, draggableId } = payload;
             const newFieldsIds = Array.from(column.fieldIds)
-            newFieldsIds.splice(source.index, 1);
-            newFieldsIds.splice(destination.index, 0, draggableId)
             if (!destination) {
                 return state;
             }
@@ -78,7 +76,8 @@ const formReducer = (
             ) {
                 return state;
             }
-
+            newFieldsIds.splice(source.index, 1);
+            newFieldsIds.splice(destination.index, 0, draggableId)
             return {
                 ...state,
                 column: {
@@ -91,4 +90,4 @@ const formReducer = (
     };
 };
 
-export default formReducer;
+export default newFormReducer;

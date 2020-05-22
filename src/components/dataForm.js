@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useDispatch } from "react-redux";
-import { FORM } from "../actions";
+import { NEW_FORM } from "../actions";
 
 const DataForm = ({ handleFormChange, handleFieldChange, newField, form}) => {
     const { type, name, label } = newField;
@@ -26,7 +26,7 @@ const DataForm = ({ handleFormChange, handleFieldChange, newField, form}) => {
         <br />
         <label>Label</label>
         <input name="label" value={label} onChange={handleFieldChange}></input>
-        <button type="submit" onClick={(e) => { e.preventDefault(); dispatch(FORM(newField, "NEW_FIELD")) }}>Add New NEW_FIELD</button>
+        <button type="submit" onClick={(e) => { e.preventDefault(); dispatch(NEW_FORM(newField, "NEW_FIELD")) }}>Add New NEW_FIELD</button>
     </form>
     )
 }

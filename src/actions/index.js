@@ -37,7 +37,7 @@ export const SIGN_OUT = () => {
     }
 }
 
-export const FORM = (payload, type) => {
+export const NEW_FORM = (payload, type) => {
         return {
         type,
         payload
