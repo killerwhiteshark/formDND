@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import { useSelector, useDispatch } from "react-redux";
+// import { increment, decrement, SIGN_IN, SIGN_OUT, number } from "./actions";
+
+import Form from "./components/form";
 
 function App() {
+  // const [num, setNum] = useState(0);
+  // const counter = useSelector((state)=> state.counter.count);
+  // const num = useSelector(state => state.counter.number)
+  // const isLogged = useSelector(state => state.isLogged);
+  // const dispatch = useDispatch();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form />
+        {/* <div style={{marginRight: 10}}>{counter}</div>
+        <input type="number" onChange={(e) => dispatch(number(Number(e.target.value)))} value={num}></input>
+        <button onClick={() => dispatch(increment(num))}>+</button>
+        <button onClick={() => dispatch(decrement(num))}>-</button>
+        {isLogged ? <p style={{color: "rgb(51, 255, 0)", backgroundColor:"blue"}}>IS LOGGED IN</p> : <p style={{color:"red", backgroundColor:"black"}}>IS LOGGED OUT</p>}
+        <button onClick={() => dispatch(SIGN_IN())}>SIGN IN </button>
+        <button onClick={() => dispatch(SIGN_OUT())}>SIGN_OUT</button> */}
     </div>
-  );
-}
-
-export default App;
+      );
+    };
+    export default App;
