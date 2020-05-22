@@ -71,13 +71,11 @@ const formReducer = (
             newFieldsIds.splice(source.index, 1);
             newFieldsIds.splice(destination.index, 0, draggableId)
             if (!destination) {
-                console.log("destination is:", destination)
                 return state;
             }
             if (destination.droppableId === source.droppableId &&
                 destination.index === source.index
             ) {
-                console.log("desination and source index are the same")
                 return state;
             }
 
