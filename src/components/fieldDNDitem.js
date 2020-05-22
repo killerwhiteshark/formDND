@@ -24,10 +24,9 @@ const FieldItem = ({ field, index }) => {
             {(provided) => (
                 <div
                     {...provided.draggableProps}
-                    {...provided.dragHandleProps}
                     ref={provided.innerRef}
                 >
-                    <p style={{ border: "1px lightgrey solid", background: "white", marginBottom: "4px" }}>Label: {label}, Name: {name}, Type: {type}</p>
+                    <p {...provided.dragHandleProps} style={{ border: "1px lightgrey solid", background: "blue", margin: 4, width: "max-content", color: "white" }}>Label: {label}, Name: {name}, Type: {type}</p>
                 </div>
             )}
         </Draggable>

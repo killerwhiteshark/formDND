@@ -17,11 +17,6 @@ const Column = ({ column, fields }) => {
                 <div
                     ref={provided.innerRef}
                     {...provided.droppableProps}
-                    style={{
-                        width: 500,
-                        height:500,
-                        border: "1px solid black"
-                    }}
                 >
                    {fields.map((field, idx) => <FieldItem key={field.id} field={field} index={idx}/>)}
                     {provided.placeholder}
